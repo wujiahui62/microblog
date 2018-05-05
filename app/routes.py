@@ -172,7 +172,7 @@ def edit_profile():
         current_user.about_me = form.about_me.data
         current_user.zipcode = form.zipcode.data
         db.session.commit()
-        flash(_('Your changes have been saved.'))
+        flash(_('Your changes have been saved!'))
         return redirect(url_for('edit_profile'))
     elif request.method == 'GET':
         form.username.data = current_user.username
@@ -227,6 +227,4 @@ def send_copy():
     post = request.form['post_text']
     author = request.form['post_author']
     send_copy_email(user, post, author)
-    print(author)
-    print(post)
     return "send email"

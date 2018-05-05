@@ -54,6 +54,7 @@ class EditProfileForm(FlaskForm):
     zipcode = IntegerField(_l('Zipcode'))
     submit = SubmitField(_l('Submit'))
 
+
     def __init__(self, original_username, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)
         self.original_username = original_username
