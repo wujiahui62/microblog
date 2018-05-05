@@ -8,7 +8,7 @@
             <td>
                 {% set user_link %}
                     <a href="{{ url_for('user', username=post.author.username) }}">
-                    <span id="author{{ post.id }}">
+                    <span data-time={{post.timestamp}} id="author{{ post.id }}">
                         {{ post.author.username }}
                     </span>
                     </a>

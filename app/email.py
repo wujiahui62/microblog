@@ -27,11 +27,11 @@ def send_password_reset_email(user):
                html_body=render_template('email/reset_password.html',
                                          user=user, token=token))
 
-def send_copy_email(user, post, author):
+def send_copy_email(user, post, author, time):
     send_email(_('[Microblog] Your copy of post'),
                sender=app.config['ADMINS'][0],
                recipients=[user.email],
                text_body=render_template('email/send_copy.txt',
-                                         user=user, post=post, author=author),
+                                         user=user, post=post, author=author, time=time),
                html_body=render_template('email/send_copy.html',
-                                         user=user, post=post, author=author))
+                                         user=user, post=post, author=author, time=time))

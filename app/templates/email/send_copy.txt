@@ -2,7 +2,7 @@ Dear {{ user.username }},
 
 The following is your post:
 
-{{ author }} said: {{ post }}.
+{{ author }} said: {{ post }} at {{ time }}.
 
 Have fun with Microblog!
 

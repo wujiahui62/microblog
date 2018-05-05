@@ -226,5 +226,6 @@ def send_copy():
     user = current_user
     post = request.form['post_text']
     author = request.form['post_author']
-    send_copy_email(user, post, author)
+    time = request.form['post_time']
+    send_copy_email(user, post, author, time)
     return "send email"

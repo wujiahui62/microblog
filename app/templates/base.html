@@ -69,9 +69,11 @@
 
         function send_copy(sourceElem, destElem, sourceAuthor) {
             $(destElem).html('<img src="{{ url_for('static', filename='loading.gif') }}">');
+            
             $.post('/send_copy', {
                 post_text: $(sourceElem).text(),
-                post_author: $(sourceAuthor).text()
+                post_author: $(sourceAuthor).text(),
+                post_time: $(sourceAuthor).attr('data-time')
             }).done(function(response) {
                 $(destElem).text("{{ _('Copy of the post is sent to your email.') }}")
             }).fail(function() {
