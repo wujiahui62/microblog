@@ -1,7 +1,7 @@
 # Final project - Add 3 features to the microblog application
 
 
-* ### The app is deployed on pythonanywhere, [click here](http://jiahui.pythonanywhere.com/) to use the app.
+* ### The app is deployed on pythonanywhere, url for the app: http://jiahui.pythonanywhere.com
 
 * ### [Click here](https://github.com/wujiahui62/microblog) for the source code.
 
