@@ -262,6 +262,7 @@ class EditProfileForm(FlaskForm):
 ## Deployment
 
 * go to the bash console of PA
+
 ```
 cd mysite
 git clone https://github.com/wujiahui62/microblog.git
@@ -270,16 +271,41 @@ mkvirtualenv --python=/usr/bin/python3.6 my-virtualenv
 pip install flask
 pip install -r requirements.txt
 ```
+
+* configure the `wsgi` file
+
+```
+import sys
+path = '/home/Jiahui/mysite/microblog'
+if path not in sys.path:
+    sys.path.append(path)
+
+from microblog import app as application  # noqa
+
+```
+
+* configure the webapp
+
+```
+source code: /home/Jiahui/mysite/microblog
+working directory: /home/Jiahui/mysite/microblog
+Virtualenv: /home/Jiahui/.virtualenvs/my-virtualenv
+```
+
 * disable the following line in start.sh
+
 ```
 source venv/bin/activate
 flask run
 ```
+
 * change mode of the start.sh file and run start.sh
+
 ```
 chmod +x /home/Jiahui/mysite/microblog/start.sh
 ./start.sh
 ```
+
 * Reload, done
 
 ---
