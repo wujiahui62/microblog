@@ -1,9 +1,10 @@
 # Final project - Add 3 features to the microblog application
 
+* ## Please read ther report [here](https://github.com/wujiahui62/microblog/blob/master/report/final_project.md), the pdf file does not show images correctly
 
 * ### The app is deployed on pythonanywhere, url for the app: http://jiahui.pythonanywhere.com
 
-* ### [Click here](https://github.com/wujiahui62/microblog) for the source code.
+* ### [Click here](https://github.com/wujiahui62/microblog) for the source code
 
 ---
 ## Examples of the added features
@@ -12,7 +13,7 @@
 
 ![4](4.png)
 
-* after saving thoses changes and going back to the `user` page, the weather of the zipcode will show on the right of the profile, and uploaded image will be used as a photo. 
+* after saving thoses changes and going back to the `user` page, the weather of the zipcode will show on the right of the profile, and uploaded image will be used as a photo.
 
 ![2](2.png)
 
@@ -29,9 +30,11 @@
 ![7](7.png)
 
 ---
+
 ## Code 
 
 * `config.py`, configure the weather api key and uploads
+
 ```
     WEATHERAPIKEY = '&appid=c63608b30062c60e04f04ba158de1c84'
     UPLOADS_DEFAULT_DEST = 'app/static/img/'
