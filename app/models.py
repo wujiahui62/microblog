@@ -23,6 +23,8 @@ class User(UserMixin, db.Model):
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
     zipcode = db.Column(db.Integer)
+    image_filename = db.Column(db.String, default=None, nullable=True)
+    image_url = db.Column(db.String, default=None, nullable=True)
     followed = db.relationship(
         'User', secondary=followers,
         primaryjoin=(followers.c.follower_id == id),
@@ -88,6 +90,7 @@ class Post(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     language = db.Column(db.String(5))
+    # has_uploaded_photo = db.Column(db.Boolean, default=False, nullable=False)
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)

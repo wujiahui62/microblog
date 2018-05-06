@@ -1,104 +1,108 @@
-2018-05-05 03:16:28,536 ERROR: Exception on /user/Jenny [GET] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-05-06 00:05:26,543 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog1/app/__init__.py:57]
+2018-05-06 00:07:00,655 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog1/app/__init__.py:57]
+2018-05-06 00:08:03,224 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog1/app/__init__.py:57]
+2018-05-06 00:09:10,335 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog1/app/__init__.py:57]
+2018-05-06 00:10:03,103 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog1/app/__init__.py:57]
+2018-05-06 00:12:26,675 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog1/app/__init__.py:57]
+2018-05-06 00:13:12,266 ERROR: Exception on /explore [GET] [in /Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
     raise value
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/app/routes.py", line 173, in user
-    temp=temp, form_send_copy=form_send_copy)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+  File "/Users/jiahuiwu/Desktop/microblog1/app/routes.py", line 66, in explore
+    prev_url=prev_url)
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
     rv = template.render(context)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
     return original_render(self, *args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
     return self.environment.handle_exception(exc_info, True)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/base.html", line 1, in top-level template code
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
     {% block doc -%}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
     {%- block html %}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
     {% block body -%}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
     {% block content -%}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/base.html", line 48, in block "content"
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/base.html", line 48, in block "content"
     {% block app_content %}{% endblock %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/user.html", line 55, in block "app_content"
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/index.html", line 11, in block "app_content"
     {% include '_post.html' %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/_post.html", line 33, in top-level template code
-    {{ wtf.quick_form(form_send_copy) }}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/_post.html", line 5, in top-level template code
+    {% if user.image_url %}
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'wtf' is undefined
-2018-05-05 03:19:02,242 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
-2018-05-05 03:19:09,533 ERROR: Exception on /user/Jenny [GET] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2018-05-06 00:13:59,759 ERROR: Exception on /explore [GET] [in /Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
     raise value
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/app/routes.py", line 173, in user
-    temp=temp, form_send_copy=form_send_copy)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+  File "/Users/jiahuiwu/Desktop/microblog1/app/routes.py", line 66, in explore
+    prev_url=prev_url)
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
     rv = template.render(context)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
     return original_render(self, *args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
     return self.environment.handle_exception(exc_info, True)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/base.html", line 1, in top-level template code
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
     {% block doc -%}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
     {%- block html %}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
     {% block body -%}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
     {% block content -%}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/base.html", line 48, in block "content"
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/base.html", line 48, in block "content"
     {% block app_content %}{% endblock %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/user.html", line 55, in block "app_content"
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/index.html", line 11, in block "app_content"
     {% include '_post.html' %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/_post.html", line 33, in top-level template code
-    {{ wtf.quick_form(form_send_copy) }}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+  File "/Users/jiahuiwu/Desktop/microblog1/app/templates/_post.html", line 5, in top-level template code
+    {% if user.image_url %}
+  File "/Users/jiahuiwu/anaconda/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'wtf' is undefined
-2018-05-05 03:19:51,305 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+jinja2.exceptions.UndefinedError: 'user' is undefined

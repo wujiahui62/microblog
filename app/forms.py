@@ -5,7 +5,8 @@ from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
 from flask_babel import _, lazy_gettext as _l
 from app.models import User
-
+from flask_wtf.file import FileField, FileAllowed, FileRequired
+from app import images
 
 class LoginForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])
@@ -52,8 +53,8 @@ class EditProfileForm(FlaskForm):
     about_me = TextAreaField(_l('About me'),
                              validators=[Length(min=0, max=140)])
     zipcode = IntegerField(_l('Zipcode'))
-    submit = SubmitField(_l('Submit'))
-
+    image = FileField('Image', validators=[FileRequired(), FileAllowed(images, 'Images only!')])
+    # submit = SubmitField(_l('Submit'))
 
     def __init__(self, original_username, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)

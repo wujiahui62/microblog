@@ -4,7 +4,7 @@ from flask import jsonify
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
 from flask_babel import _, get_locale
-from app import app, db
+from app import app, db, images
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm, \
     ResetPasswordRequestForm, ResetPasswordForm
 from app.models import User, Post
@@ -13,6 +13,7 @@ from app.translate import translate
 from guess_language import guess_language
 import requests
 import math
+
 
 @app.before_request
 def before_request():
@@ -171,6 +172,9 @@ def edit_profile():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
         current_user.zipcode = form.zipcode.data
+        filename = images.save(request.files['image'])
+        current_user.image_filename = filename
+        current_user.image_url = images.url(filename)
         db.session.commit()
         flash(_('Your changes have been saved!'))
         return redirect(url_for('edit_profile'))
@@ -229,3 +233,7 @@ def send_copy():
     time = request.form['post_time']
     send_copy_email(user, post, author, time)
     return "send email"
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS

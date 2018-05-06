@@ -3,7 +3,14 @@
 {% block app_content %}
     <table class="table table-hover">
         <tr>
-            <td width="256px"><img src="{{ user.avatar(256) }}"></td>
+            {% if user.image_url %}
+            <td><div width="256px" class="photo"><img src="{{ user.image_url }}"></div>
+            <td><div width="256px" class="avatar"><img src="{{ user.avatar(256) }}"></div>
+            </td>           
+            {% else %}
+            <td width="256px"><img src="{{ user.avatar(256) }}">
+            </td>            
+            {% endif %}
             <td>
                 <h1>{{ _('User') }}: {{ user.username }}</h1>
                 {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
@@ -13,6 +20,10 @@
                 <p>{{ _('%(count)d followers', count=user.followers.count()) }}, {{ _('%(count)d following', count=user.followed.count()) }}</p>
                 {% if user == current_user %}
                 <p><a href="{{ url_for('edit_profile') }}">{{ _('Edit your profile') }}</a></p>
+                {% if user.image_url %}        
+                    <button class="avatar" type="button" class="btn btn-outline-secondary">Show uploaded photo</button>
+                    <button class="photo" type="button" class="btn btn-outline-secondary">Show avatar photo</button>
+                {% endif %}        
                 {% elif not current_user.is_following(user) %}
                 <p><a href="{{ url_for('follow', username=user.username) }}">{{ _('Follow') }}</a></p>
                 {% else %}
@@ -42,12 +53,10 @@
                         <td>Humidity</td>
                         <td>{{ weather.main.humidity }}</td>
                     </tr>
-
                 </tbody>
                 </table>
                 </div>
                 {% endif %}
-    
             </td>
         </tr>
     </table>

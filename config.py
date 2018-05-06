@@ -17,6 +17,7 @@ class Config(object):
     POSTS_PER_PAGE = 5
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     WEATHERAPIKEY = '&appid=c63608b30062c60e04f04ba158de1c84'
-    UPLOAD_FOLDER = '/static'
-    ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
-    MAX_CONTENT_LENGTH = 16 * 1024 * 1024
+    UPLOADS_DEFAULT_DEST = 'app/static/img/'
+    UPLOADS_DEFAULT_URL = 'http://localhost:5000/static/img/'
+    UPLOADED_IMAGES_DEST = 'app/static/img/'
+    UPLOADED_IMAGES_URL = 'http://localhost:5000/static/img/'

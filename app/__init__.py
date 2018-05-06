@@ -11,6 +11,7 @@ from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from config import Config
 from werkzeug.utils import secure_filename
+from flask_uploads import UploadSet, IMAGES, configure_uploads
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -23,6 +24,9 @@ mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 babel = Babel(app)
+# Configure the image uploading via Flask-Uploads
+images = UploadSet('images', IMAGES)
+configure_uploads(app, images)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

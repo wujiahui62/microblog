@@ -1,5 +1,4 @@
-2018-05-05 02:40:39,777 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
-2018-05-05 02:40:45,166 ERROR: Exception on /index [POST] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-05-05 11:05:47,193 ERROR: Exception on /send_copy [POST] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -15,81 +14,82 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/app/routes.py", line 46, in index
-    send_copy(current_user, posts)
+  File "/Users/jiahuiwu/Desktop/microblog/app/routes.py", line 239, in send_copy
+    send_copy(user, post)
   File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-TypeError: send_copy() missing 2 required positional arguments: 'author' and 'time'
-2018-05-05 02:41:28,789 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
-2018-05-05 02:41:32,495 ERROR: Exception on /index [POST] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+TypeError: send_copy() takes 0 positional arguments but 2 were given
+2018-05-05 11:06:20,897 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:06:23,261 ERROR: Exception on /send_copy [POST] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/app/routes.py", line 46, in index
-    send_copy(current_user, posts)
-NameError: name 'send_copy' is not defined
-2018-05-05 02:42:04,926 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
-2018-05-05 03:06:42,362 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
-2018-05-05 03:06:54,348 ERROR: Exception on /user/Jenny [GET] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2018-05-05 11:12:11,775 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:12:14,742 ERROR: Exception on /send_copy [POST] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/app/routes.py", line 167, in user
-    next_url=next_url, prev_url=prev_url, weather=weather, temp=temp)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
-    {%- block html %}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
-    {% block body -%}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
-    {% block content -%}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/base.html", line 48, in block "content"
-    {% block app_content %}{% endblock %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/user.html", line 55, in block "app_content"
-    {% include '_post.html' %}
-  File "/Users/jiahuiwu/Desktop/microblog/app/templates/_post.html", line 33, in top-level template code
-    {{ wtf.quick_form(form_send_copy) }}
-  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'wtf' is undefined
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2018-05-05 11:12:34,180 ERROR: Exception on /send_copy [POST] [in /Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/jiahuiwu/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2018-05-05 11:12:49,509 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:13:23,031 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:23:23,314 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:25:05,782 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:27:37,232 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:27:53,498 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:29:01,104 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:34:40,924 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:36:18,920 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:37:37,887 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:38:38,138 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:39:05,966 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 11:41:55,770 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:52]
+2018-05-05 12:10:50,767 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:17:08,456 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:19:39,299 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:25:45,762 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:26:57,084 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:31:37,953 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:32:38,925 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:44:38,128 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:45:02,525 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:45:16,414 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:46:19,633 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 12:47:52,923 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 13:34:59,211 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 13:44:58,523 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 13:45:22,822 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 13:46:03,265 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 13:47:59,520 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 18:43:49,178 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 19:26:33,621 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 20:12:10,388 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 20:44:59,962 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:53]
+2018-05-05 21:44:58,411 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:57]
+2018-05-05 21:49:20,674 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:57]
+2018-05-05 21:49:37,159 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:57]
+2018-05-05 21:49:44,232 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:57]
+2018-05-05 21:49:57,953 INFO: Microblog startup [in /Users/jiahuiwu/Desktop/microblog/app/__init__.py:57]
