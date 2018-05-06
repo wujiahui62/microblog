@@ -234,3 +234,6 @@ def send_copy():
     send_copy_email(user, post, author, time)
     return "send email"
 
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
