@@ -1,10 +1,14 @@
 # Welcome to Microblog!
 
 ## Enhanced features added:
-### Show weather if the zipcode is given in the current user's user profile
-### Added a send me a copy link below each post to send a copy to current use's email address
+### 1. Added upload image, user can select to show the uploaded image or the avatar image
+
+### 2. Show weather if the zipcode is given in the current user's user profile
+
+### 3. Added a send me a copy link below each post to send a copy to current use's email address
 
 #### Deployment on pythonanywhere
+
 * go to the bash console of PA
 ```
 cd mysite
@@ -24,3 +28,10 @@ chmod +x /home/Jiahui/mysite/microblog/start.sh
 ./start.sh
 ```
 * Reload, done
+
+
+#### References
+
+[combine flask-wtf and flask-uploads](http://www.patricksoftwareblog.com/tag/flask-uploads/)
+
+[deploy on pythonanywhere](https://scotch.io/tutorials/build-a-crud-web-app-with-python-and-flask-part-three)
