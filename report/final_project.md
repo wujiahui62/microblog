@@ -1,7 +1,5 @@
 # Final project - Add 3 features to the microblog application
 
-* ## Please read ther report [here](https://github.com/wujiahui62/microblog/blob/master/report/final_project.md), the pdf file does not show images correctly
-
 * ### The app is deployed on pythonanywhere, url for the app: http://jiahui.pythonanywhere.com
 
 * ### [Click here](https://github.com/wujiahui62/microblog) for the source code
