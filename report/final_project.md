@@ -4,6 +4,8 @@
 
 * ### [Click here](https://github.com/wujiahui62/microblog) for the source code
 
+* ### [Read the report in markdown here](https://github.com/wujiahui62/microblog/blob/master/report/final_project.md)
+
 ---
 ## Examples of the added features
 
