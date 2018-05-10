@@ -21,3 +21,9 @@ class Config(object):
     UPLOADS_DEFAULT_URL = 'http://localhost:5000/static/img/'
     UPLOADED_IMAGES_DEST = 'app/static/img/'
     UPLOADED_IMAGES_URL = 'http://localhost:5000/static/img/'
+    MAIL_SERVER=smtp.googlemail.com
+    MAIL_PORT=587
+    MAIL_USE_TLS=True
+    MAIL_USERNAME=libaixiu2014@gmail.com
+    MAIL_PASSWORD=cloud_app
+    MS_TRANSLATOR_KEY=5279b9fe290f4c84a7a4d15b926a4a45
