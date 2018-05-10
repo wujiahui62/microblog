@@ -1,6 +1,8 @@
 # Final project - Add 3 features to the microblog application
 
-* ### The app is deployed on pythonanywhere, url for the app: http://jiahui.pythonanywhere.com
+* ### Pythonanywhere url: http://jiahui.pythonanywhere.com
+
+* ### DigitalOcean url: http://206.189.205.179
 
 * ### [Click here](https://github.com/wujiahui62/microblog) for the source code
 
@@ -262,7 +264,7 @@ class EditProfileForm(FlaskForm):
 
 ---
 
-## Deployment
+## Deployment on Pythonanywhere
 
 * go to the bash console of PA
 
@@ -310,6 +312,45 @@ chmod +x /home/Jiahui/mysite/microblog/start.sh
 ```
 
 * Reload, done
+
+---
+## Deployment on DigitalOcean
+
+* create a droplet with Ubuntu image
+
+* use ssh connection and change the password
+
+```
+ssh root@206.189.205.179
+```
+
+* run the following command to install python and pip
+
+```
+apt-get update
+apt-get -y upgrade
+apt-get install -y python3-pip
+pip3 install --upgrade pip
+```
+
+* Clone the code and install the packages
+
+```
+git clone https://github.com/wujiahui62/microblog.git
+cd microblog
+chmod +x install.sh
+./install.sh
+```
+
+* change the firewall setting and run the app, ctrl+A+D to detach the screen, fg to bring it to foreground
+
+```
+screen
+ufw status
+ufw allow http
+./start.sh
+flask run --host=0.0.0.0 &
+```
 
 ---
 ## Reference
