@@ -18,9 +18,9 @@ class Config(object):
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     WEATHERAPIKEY = '&appid=c63608b30062c60e04f04ba158de1c84'
     UPLOADS_DEFAULT_DEST = 'app/static/img/'
-    UPLOADS_DEFAULT_URL = 'https://www.pythonanywhere.com/user/Jiahui/files/home/Jiahui/mysite/microblog/app/static/img'
+    UPLOADS_DEFAULT_URL = 'https://0.0.0.0/app/static/img'
     UPLOADED_IMAGES_DEST = 'app/static/img/'
-    UPLOADED_IMAGES_URL = 'https://www.pythonanywhere.com/user/Jiahui/files/home/Jiahui/mysite/microblog/app/static/img'
+    UPLOADED_IMAGES_URL = 'https://0.0.0.0/app/static/img'
     MAIL_SERVER='smtp.googlemail.com'
     MAIL_PORT=587
     MAIL_USE_TLS=True

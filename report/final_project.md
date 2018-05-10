@@ -295,20 +295,31 @@ from microblog import app as application  # noqa
 source code: /home/Jiahui/mysite/microblog
 working directory: /home/Jiahui/mysite/microblog
 Virtualenv: /home/Jiahui/.virtualenvs/my-virtualenv
+static: /home/Jiahui/mysite/microblog/app/static
 ```
 
-* disable the following line in start.sh
+* change the url and hard code the environment variable in `config.py`
 
 ```
-source venv/bin/activate
-flask run
+UPLOADS_DEFAULT_URL = 'https://www.pythonanywhere.com/user/Jiahui/files/home/Jiahui/mysite/microblog/app/static/img/'
+UPLOADED_IMAGES_URL = 'https://www.pythonanywhere.com/user/Jiahui/files/home/Jiahui/mysite/microblog/app/static/img/'
+MAIL_SERVER='smtp.googlemail.com'
+MAIL_PORT=587
+MAIL_USE_TLS=1
+MAIL_USERNAME='libaixiu2014@gmail.com'
+MAIL_PASSWORD='cloud_app'
+MS_TRANSLATOR_KEY='5279b9fe290f4c84a7a4d15b926a4a45'
 ```
 
-* change mode of the start.sh file and run start.sh
+* disable the thread in email and send email directly
 
 ```
-chmod +x /home/Jiahui/mysite/microblog/start.sh
-./start.sh
+def send_email(subject, sender, recipients, text_body, html_body):
+    msg = Message(subject, sender=sender, recipients=recipients)
+    msg.body = text_body
+    msg.html = html_body
+    # Thread(target=send_async_email, args=(app, msg)).start()
+    send_async_email(app, msg)
 ```
 
 * Reload, done
