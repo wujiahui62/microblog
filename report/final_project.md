@@ -4,9 +4,9 @@
 
 * ### DigitalOcean url: http://206.189.205.179
 
-* ### [Click here](https://github.com/wujiahui62/microblog) for the source code
+* ### Source code: https://github.com/wujiahui62/microblog
 
-* ### [Read the report in markdown here](https://github.com/wujiahui62/microblog/blob/master/report/final_project.md)
+* ### Report: https://github.com/wujiahui62/microblog/blob/master/report/final_project.md
 
 ---
 ## Examples of the added features
