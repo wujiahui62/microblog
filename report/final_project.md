@@ -1,6 +1,6 @@
 # Final project - Add 3 features to the microblog application
 
-* ### Pythonanywhere url: http://jiahui.pythonanywhere.com
+* ### Pythonanywhere url: http://jiahui.pythonanywhere.com, email sending and photo url issues are fixed
 
 * ### DigitalOcean url: http://206.189.205.179
 
@@ -8,7 +8,10 @@
 
 * ### Report: https://github.com/wujiahui62/microblog/blob/master/report/final_project.md
 
+* ### Demo account: username: `Jenny`, password: `cloudapp`
+
 ---
+
 ## Examples of the added features
 
 * user can upload their photos and change zipcode in the `edit_profile` page
@@ -360,6 +363,7 @@ screen
 ufw status
 ufw allow http
 ./start.sh
+export FLASK_RUN_PORT=80
 flask run --host=0.0.0.0 &
 ```
 
